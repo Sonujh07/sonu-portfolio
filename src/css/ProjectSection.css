@@ -1,0 +1,279 @@
+.project-section {
+    background-color: rgb(231, 231, 231);
+    margin-top: 4rem;
+    padding: 0 5rem;
+
+  }
+  
+  .page-header {
+    color: var(--bgOrange);
+    font-size: 90px;
+    text-align: center;
+    padding-top: 30px;
+  }
+  
+  /* Project container and card styling */
+  .project-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    border-radius: 5em;
+  }
+  
+  .project-card {
+    width: 90%;
+    height: 550px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-image: url('../assets/projectImage.jpg');
+    background-size: 100% 100%;
+    /* border-radius: 10em; */
+    box-shadow: 0px 0px 40px #1f1f1f;
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+        
+  }
+  
+  .project-card:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Overlay effects */
+  .project-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;  
+    background-color: #1f1f1f9a;    
+    z-index: 0;
+    
+  }
+  
+  .project-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #343d68, #343d68be, #343d687c);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.4s;
+    z-index: 1;
+  }
+  
+  .project-card:hover::before {
+    transform: scaleX(1);
+  }
+  
+  /* Project number styling */
+  .project-number {
+    position: absolute;
+    font-size: 200px;
+    font-weight: 600;
+    color: white;
+    z-index: 10;
+    opacity: 0;
+  }
+  
+  .project-card:hover .project-number {
+    opacity: 1;
+  }
+  
+  .project-number-right {
+    position:absolute;
+    right: -40px;
+    top: 15px;
+  }
+  
+  .project-number-left {
+    position:absolute;
+    right: -40px;
+    top: -45px;
+  }
+  
+  /* Project content styling */
+  .project-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 4em;
+    bottom: 20%;
+    z-index: 5;
+    gap: 35px;
+    transition: all 0.4s;
+    inset: 0;
+  }
+  
+  .project-content-left {
+    left: 10%;
+  }
+  
+  .project-content-right {
+    right: 10%;
+  }
+  
+  .project-skills-container {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .project-skill {
+    /* margin-top: 2em; */
+    /* padding-top: 1em; */
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.5em;
+  }
+  
+  .project-heading {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 3rem;
+  }
+  
+  .project-subHeading {
+    width: 70%;
+    font-size: 16px;
+    font-style: italic;
+  }
+  
+  .btn-grp {
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+  }
+  
+  .icon {
+    cursor: pointer;
+    color: white;
+    font-size: 35px;
+    transition: all 0.4s;
+  }
+  
+  .icon:hover {
+    color: var(--bgOrange);
+  }
+  
+  /* Responsive Media Queries */
+  /* @media (max-width: 1024px) {
+    .page-header {
+      font-size: 3.75rem;
+    }
+  
+    .project-container {
+      height: 120%;
+      padding: 2rem;
+      gap: 3.75rem;
+    }
+  
+    .project-card {
+      height: 150%;
+     
+      padding: 10em;
+    }
+  
+    .project-content {
+      bottom: 10%;
+      padding: 1em;
+    }
+  
+    .project-heading {
+      font-size: 2.5rem; 
+    }
+  
+    .project-skill {
+      width: 35px;
+    }
+  
+    .project-number {
+      font-size: 7.5rem; 
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .page-header {
+      font-size: 2.5rem; 
+    }
+  
+    .project-container {
+      padding: 1.5rem; 
+      gap: 1.875rem; 
+    }
+  
+    .project-card {
+      width: 100%;
+      height: 350px; 
+    }
+  
+    .project-content {
+      bottom: 5%;
+      padding: 1em;
+    }
+  
+    .project-heading {
+      font-size: 1.875rem; 
+    }
+  
+    .project-subHeading {
+      width: 100%;
+    }
+  
+    .btn-grp {
+      flex-direction: column; 
+    }
+  
+    .icon {
+      font-size: 1.875rem; 
+    }
+  
+    .project-skills-container {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .page-header {
+      font-size: 1.875rem; 
+    }
+  
+    .project-card {
+      width: 100%;
+      height: auto; 
+      min-height: 500px;
+    }
+  
+    .project-content {
+      bottom: 2%;
+      padding: 1em;
+    }
+  
+    .project-heading {
+      font-size: 1.5rem; 
+    }
+  
+    .project-number {
+      font-size: 5.625rem; 
+    }
+  
+    .project-skill {
+      width: 30px;
+    }
+  
+    .icon {
+      font-size: 1.5625rem; 
+    }
+  }
+   */

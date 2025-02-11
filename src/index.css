@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base{
+
+    @font-face {
+        font-family: roboto;
+        font-weight: 800;
+        src: url('./fonts/Roboto/Roboto-Italic.ttf');
+    }
+    @font-face {
+        font-family: roboto-regular;
+        font-weight: 400;
+        src: url('./fonts/Roboto/Roboto-Regular.ttf');
+    }
+    @font-face {
+        font-family: raleway;
+        font-weight: 400;
+        src: url('./fonts/Raleway/Raleway-Regular.ttf');
+    }
+}
+
+@keyframes scaleBlob {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-50px);; 
+       
+        
+    }
+    100% {
+        transform: translateX(0); /* Scale back to original size */
+    }
+}
+
+.blob-style {
+    animation: scaleBlob 5s ease-in infinite; /* Infinite scaling animation */
+}
+
+
+  

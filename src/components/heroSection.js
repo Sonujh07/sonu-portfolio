@@ -28,7 +28,7 @@ const HeroSection = () => {
   }, [charIndex, currentWordIndex]);
 
   return (
-    <section className=" flex relative w-full h-[calc(100vh-6rem)] flex-col-reverse lg:flex-row justify-between items-center px-4 py-20 xs:px-6 xs:py-10 sm:px-8 lg:px-20 gap-4 xs:gap-4">
+    <section className=" flex relative w-10/12 mx-auto h-[calc(100vh-6rem)] flex-col-reverse lg:flex-row justify-between items-center px-4 py-20 xs:px-6 xs:py-10 sm:px-8 lg:px-20 gap-4 xs:gap-4">
       <div className="absolute inset-0 bg-cover bg-center before:absolute before:inset-0 before:bg-heroSectionBackground before:bg-cover before:bg-center before:z-0"></div>
       <div className="absolute inset-0 after:absolute after:inset-0 after:bg-gradient-to-r after:from-black/60 after:via-black/60 after:to-black/60 after:z-0 after:blur-md"></div>
 
@@ -57,7 +57,7 @@ const HeroSection = () => {
       </div>
 
       {/* Right Content (Image) */}
-      <div className="flex justify-center items-center w-full xs:w-2/3 sm:w-4/6 md:w-[48%] lg:w-[45%] z-10 xs:pt-20 lg:h-[155%]">
+      <div className="flex justify-center items-center w-full xs:w-2/3 sm:w-4/6 md:w-[48%] lg:w-[45%] z-10 xs:pt-20 lg:scale-100 lg:transform ">
         <img src={profilePhoto} alt="profilePhoto"
           className="w-2/3 xs:w-1/2 sm:w-1/2 lg:w-screen md:h-full lg:h-[70%] object-fit" />
       </div>

@@ -66,12 +66,12 @@ const ContactForm = () =>{
     
 
     return (
-        <div className="flex flex-col mx-auto w-10/12 gap-y-9">
+        <div className="flex flex-col mx-auto w-10/12 gap-y-9 mt-10">
              {/* top letter heading */}
                 <div className="text-center mx-auto">
                     <div className="flex gap-3 text-lg justify-center items-center mb-5">
                         <GiAnchor className="text-green-700 text-4xl"/>
-                        <div className="text-2xl text-blue-600">My contact</div> 
+                        <div className="text-2xl text-blue-600 gap-y-10">My contact</div> 
                     </div>
                     <p className="text-2xl font-medium -ml-12 md:ml-0">I WANT TO HEAR FROM YOU</p>
                 </div>
@@ -106,32 +106,25 @@ const ContactForm = () =>{
                         <div className="flex flex-col md:flex-row gap-5 mb-5">
                             
                                 <PhoneInput
-                                    country={'in'} // Default country code (can change to any country)
+                                    country={'in'} 
                                     value={formData.contactNo}
-                                    onChange={handlePhoneChange} // Sets the full phone number with country code in state
-                                    enableSearch={true} // Adds a search field in the dropdown to find countries
+                                    onChange={handlePhoneChange} 
+                                    enableSearch={true} 
                                     placeholder="ENTER YOUR PHONE NUMBER"
                                     autofocus
                                     inputStyle={{
-                                        // width: '88%',          // Makes input full width
-                                        // height: '100%',         // Matches height with other inputs
-                                        // // padding: '16px',        // Adds padding for consistency with other inputs
-                                        // borderRadius: '8px',    // Rounds the corners like other inputs
-                                        // borderColor: '#D1D5DB',  // Tailwind's border-gray-300 color
-                                        // // margin: 'px',
-                                        // color: '#374151',
-                                        // border: 'none'
+                                     
 
-                                        width: '89%',         // Makes input full width
-                                        height: '100%',        // Matches height with other inputs
-                                        borderRadius: '0.5rem', // Tailwind's 'rounded-lg' equivalent
-                                        outline: 'none',       // Removes default outline
-                                        padding: '0.5rem 1rem', // Adds padding to match Tailwind's `p-2`
+                                        width: '89%',      
+                                        height: '100%',        
+                                        borderRadius: '0.5rem', 
+                                        outline: 'none',       
+                                        padding: '0.5rem 1rem', 
                                         margin: '30px',
                                         border: 'none'
                                     }}
                                     containerStyle={{
-                                        width: '100%'           // Ensures container is full width
+                                        width: '100%'           
                                     }}
                                     inputProps={{
                                     name: 'contactNo',

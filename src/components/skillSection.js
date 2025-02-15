@@ -1,49 +1,10 @@
 
 import React from 'react';
-import blobVector from '../assets/skills/blob vector.png'; // Adjust the path as needed
-import HTML from '../assets/skills/HTML.png';
-import CSS from '../assets/skills/CSS.png';
-import JavaScript from '../assets/skills/Javascript.svg';
-import ReactLogo from '../assets/skills/React.png';
-import NodeJs from '../assets/skills/NodeJs.svg';
-import Next from '../assets/skills/Next.svg';
-import Redux from '../assets/skills/Redux.svg';
-import Tailwind from '../assets/skills/Tailwind.png';
-import Bootstrap from '../assets/skills/Bootstrap.svg';
-import MaterialUI from '../assets/skills/MaterialUI.svg';
-import Express from '../assets/skills/Express.png';
-import Git from '../assets/skills/Git.svg';
-import GitHub from '../assets/skills/Github.svg';
-import GraphQL from '../assets/skills/Graphql.svg';
-import MongoDB from '../assets/skills/MongoDB.svg';
-import Vercel from '../assets/skills/Vercel.svg';
-import ChartJs from '../assets/skills/ChartJs.svg';
-import Bash from '../assets/skills/Bash.svg';
-import Docker from '../assets/skills/Docker.svg';
-import K8s from '../assets/skills/K8s.svg';
+import blobVector from '../assets/skills/blob vector.png';
 
-const skills = [
-    { src: HTML, alt: 'HTML Logo' },
-    { src: CSS, alt: 'CSS Logo' },
-    { src: JavaScript, alt: 'JavaScript Logo' },
-    { src: ReactLogo, alt: 'React Logo' },
-    { src: NodeJs, alt: 'Node.js Logo' },
-    // { src: Next, alt: 'Next.js Logo' },
-    { src: Redux, alt: 'Redux Logo' },
-    { src: Tailwind, alt: 'Tailwind CSS Logo' },
-    // { src: Bootstrap, alt: 'Bootstrap Logo' },
-    // { src: MaterialUI, alt: 'Material UI Logo' },
-    { src: Express, alt: 'Express Logo' },
-    { src: Git, alt: 'Git Logo' },
-    { src: GitHub, alt: 'GitHub Logo' },
-    { src: GraphQL, alt: 'GraphQL Logo' },
-    { src: MongoDB, alt: 'MongoDB Logo' },
-    { src: Vercel, alt: 'Vercel Logo' },
-    { src: ChartJs, alt: 'Chart.js Logo' },
-//     { src: Bash, alt: 'Bash Logo' },
-//     { src: Docker, alt: 'Docker Logo' },
-//     { src: K8s, alt: 'Kubernetes Logo' },
-];
+import {skills} from "../assets/projectData"
+
+
 
 const SkillSection = () => {
     return (
@@ -86,7 +47,7 @@ const SkillSection = () => {
                             key={index}
                             src={skill.src}
                             alt={skill.alt}
-                            className="w-32 h-32 rounded-3xl gap-x-12 z-20" // Ensure skills logos are above blob
+                            className="w-32 h-32 rounded-3xl gap-x-12 z-20" 
                         />
                     ))}
                 </div>

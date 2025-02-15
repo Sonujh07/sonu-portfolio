@@ -2,11 +2,13 @@
     background-color: rgb(231, 231, 231);
     margin-top: 4rem;
     padding: 0 5rem;
+    min-height: 100vh; /* Ensure enough space */
+    overflow: hidden; /* Prevent overlap */
 
   }
   
   .page-header {
-    color: var(--bgOrange);
+    /* color: var(--bgOrange); */
     font-size: 90px;
     text-align: center;
     padding-top: 30px;
@@ -14,13 +16,13 @@
   
   /* Project container and card styling */
   .project-container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 3rem 0;
+    padding: 1.5rem 0;
     display: flex;
     flex-direction: column;
-    gap: 120px;
-    border-radius: 5em;
+    gap: 1em;
+    border-radius: 8em;
   }
   
   .project-card {
@@ -35,6 +37,7 @@
     box-shadow: 0px 0px 40px #1f1f1f;
     transition: transform 0.3s ease;
     margin: 0 auto;
+    border-radius: 2em;
         
   }
   
@@ -52,7 +55,7 @@
     bottom: 0;  
     background-color: #1f1f1f9a;    
     z-index: 0;
-    
+    border-radius: 2em;
   }
   
   .project-card::before {
@@ -67,6 +70,7 @@
     transform-origin: left;
     transition: all 0.4s;
     z-index: 1;
+    border-radius: 2em;
   }
   
   .project-card:hover::before {
@@ -104,11 +108,12 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    color: white;
-    padding: 4em;
-    bottom: 20%;
+    /* color: red; */
+    padding: 2em;
+    margin-top: -1em;
+    /* bottom: 20%; */
     z-index: 5;
-    gap: 35px;
+    gap: 1.5em;
     transition: all 0.4s;
     inset: 0;
   }
@@ -123,16 +128,16 @@
   
   .project-skills-container {
     width: 65%;
-    height: 100%;
+    /* height: 70%; */
     display: flex;
     flex-direction: row-reverse;
-    gap: 15px;
+    row-gap: 0.1em;
     flex-wrap: wrap;
   }
   
   .project-skill {
-    /* margin-top: 2em; */
-    /* padding-top: 1em; */
+    margin-top: 2em;
+    padding-top: 1em;
     width: 4rem;
     height: 4rem;
     border-radius: 0.5em;
@@ -168,7 +173,7 @@
   }
   
   /* Responsive Media Queries */
-  /* @media (max-width: 1024px) {
+  @media (max-width: 1024px) {
     .page-header {
       font-size: 3.75rem;
     }
@@ -180,12 +185,13 @@
     }
   
     .project-card {
-      height: 150%;
+      /* height: 150%; */
      
       padding: 10em;
     }
   
     .project-content {
+      gap: 2em;
       bottom: 10%;
       padding: 1em;
     }
@@ -202,25 +208,28 @@
       font-size: 7.5rem; 
     }
   }
-  
   @media (max-width: 768px) {
+    .project-section {
+      padding: 0 1rem;
+    }
     .page-header {
       font-size: 2.5rem; 
     }
   
     .project-container {
-      padding: 1.5rem; 
+      padding: 1rem; 
       gap: 1.875rem; 
     }
   
     .project-card {
-      width: 100%;
-      height: 350px; 
+     padding: auto;
     }
   
     .project-content {
       bottom: 5%;
       padding: 1em;
+      column-gap: 0.2em;
+      gap: 2em;
     }
   
     .project-heading {
@@ -232,7 +241,7 @@
     }
   
     .btn-grp {
-      flex-direction: column; 
+      flex-direction: row; 
     }
   
     .icon {
@@ -241,23 +250,73 @@
   
     .project-skills-container {
       width: 100%;
+
     }
   }
   
-  @media (max-width: 480px) {
+  
+  @media (max-width: 540px) {
+    .project-section {
+      padding: 0 1rem;
+    }
+    .page-header {
+      font-size: 2.5rem; 
+    }
+  
+    .project-container {
+      padding: 1.5rem; 
+      gap: 1.875rem; 
+    }
+  
+    .project-card {
+      /* min-height: 55em; */
+      padding: auto;
+    }
+  
+    .project-content {
+      bottom: 5%;
+      padding: 1em;
+    
+      gap: 1em;
+    }
+  
+    .project-heading {
+      font-size: 1.875rem; 
+    }
+  
+    .project-subHeading {
+      width: 100%;
+    }
+  
+    .btn-grp {
+      flex-direction: row; 
+    }
+  
+    .icon {
+      font-size: 2rem; 
+    }
+  
+    .project-skills-container {
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 240px) and (max-width: 480px) {
+    .project-section {
+      padding: 0 1rem;
+    }
     .page-header {
       font-size: 1.875rem; 
     }
   
     .project-card {
-      width: 100%;
-      height: auto; 
-      min-height: 500px;
+    padding: auto;
     }
   
     .project-content {
       bottom: 2%;
-      padding: 1em;
+      padding: 2em;
+    
     }
   
     .project-heading {
@@ -276,4 +335,5 @@
       font-size: 1.5625rem; 
     }
   }
-   */
+  
+   

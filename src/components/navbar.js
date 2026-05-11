@@ -48,7 +48,7 @@ const Navbar = () => {
 
           <div className="flex transition duration-700 ease-in-out  hover:text-blue-400">
             <a 
-              href={`${process.env.PUBLIC_URL}/SonuCV.pdf`} 
+              href={`${process.env.PUBLIC_URL}/SonuKumar-11-05-26.pdf`} 
               download="Sonu_Resume.pdf" 
               className="flex flex-row items-center gap-2 "
             >

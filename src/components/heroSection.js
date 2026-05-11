@@ -50,7 +50,7 @@ const HeroSection = () => {
           </p>
         </div>
         <div>
-          <a href={`${process.env.PUBLIC_URL}/SonuCV.pdf`} download="Sonu_Resume.pdf" className="relative inline-flex items-center justify-center w-auto px-5 py-2 xs:px-6 xs:py-3 font-bold text-white bg-indigo-600 rounded-md transition-all hover:ring-2 ring-offset-2 ring-indigo-500 focus:outline-none">
+          <a href={`${process.env.PUBLIC_URL}/SonuKumar-11-05-26.pdf`} download="Sonu_Resume.pdf" className="relative inline-flex items-center justify-center w-auto px-5 py-2 xs:px-6 xs:py-3 font-bold text-white bg-indigo-600 rounded-md transition-all hover:ring-2 ring-offset-2 ring-indigo-500 focus:outline-none">
             Download CV
           </a>
         </div>
